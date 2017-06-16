@@ -1,4 +1,4 @@
-# woodland
+# Woodland
 A simple Ember application to learn Ember.
 
 ## Installation
