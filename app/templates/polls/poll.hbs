@@ -1,1 +1,30 @@
-<h3>{{model.question}}</h3>
+<header class="header">
+  <h2>Welcome, Woodland Wanderers!</h2>
+  <p>Now that you've completed your training, here's a quick quiz to test your skills.</p>
+</header>
+
+<main>
+  <h3>{{model.question}}</h3>
+  <div>
+    <div>
+      <div>
+        <ul>
+          {{#each model.options as |option|}}
+            <li>
+              <button>
+                <b>Select</b>
+              </button {{action "voteForOption" model option}}>
+              <span>{{option.value}}</span>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      {{#link-to "polls.results" model}}Results{{/link-to}}
+    </div>
+  </div>
+</main>
