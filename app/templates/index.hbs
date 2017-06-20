@@ -1,1 +1,20 @@
-{{#link-to "polls"}}Polls{{/link-to}}
+<header>
+  <h2>New Poll</h2>
+  <p>Use the form below to create a new poll.</p>
+</header>
+
+<main>
+  <form {{action "createPoll" model on="submit"}}>
+    <label>Question</label>
+    {{input value=model.question type="text"}}
+    {{#each model.options as |option|}}
+      <label>Option</label>
+      {{input value=option.value type="text"}}
+    {{/each}}
+    <button>Submit!</button>
+  </form>
+</main>
+
+<footer>
+  {{#link-to "polls"}}Find a question to answer{{/link-to}}
+</footer>
