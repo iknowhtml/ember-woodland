@@ -28,7 +28,16 @@ export default Ember.Service.extend({
   getPolls() {
     return polls;
   },
-  getPollById(id){
+  getPollById(id) {
     return polls.findBy('id', id);
-  }
+  },
+  newPoll() {
+    return Poll.create({
+      options: [
+        Option.create({ votes: 0 }),
+        Option.create({ votes: 0 }),
+        Option.create({ votes: 0 })
+      ]
+    });
+  },
 });
