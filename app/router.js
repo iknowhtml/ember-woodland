@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('polls', function() {
       this.route('poll', {path: '/:poll_id'});
+      this.route('results', {path: '/results/:poll_id'});
   });
 });
 

@@ -11,9 +11,9 @@
         <ul>
           {{#each model.options as |option|}}
             <li>
-              <button>
+              <button {{action "voteForOption" model option}}>
                 <b>Select</b>
-              </button {{action "voteForOption" model option}}>
+              </button>
               <span>{{option.value}}</span>
             </li>
           {{/each}}

@@ -5,11 +5,9 @@
 
 <main>
   <form {{action "createPoll" model on="submit"}}>
-    <label>Question</label>
-    {{input value=model.question type="text"}}
+    <label>Question</label> {{input value=model.question type="text"}} <br />
     {{#each model.options as |option|}}
-      <label>Option</label>
-      {{input value=option.value type="text"}}
+      <label>Option</label> {{input value=option.value type="text"}} <br />
     {{/each}}
     <button>Submit!</button>
   </form>

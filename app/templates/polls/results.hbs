@@ -1,0 +1,8 @@
+<h2>Question:{{model.question}}</h2>
+<ul>
+  {{#each model.options as |option|}}
+    <li>
+      {{option.value}}: {{option.votes}} Votes
+    </li>
+  {{/each}}
+</ul>
