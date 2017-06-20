@@ -25,6 +25,11 @@ const polls = [
 ];
 
 export default Ember.Service.extend({
+  createPoll(poll){
+    poll.set('id', (polls.length + 1).toString());
+    polls.pushObject(poll);
+    return poll;
+  },
   getPolls() {
     return polls;
   },
