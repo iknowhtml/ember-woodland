@@ -2,7 +2,7 @@
 <ul>
   {{#each model.options as |option|}}
     <li>
-      {{option.value}}: {{option.votes}} Votes
+      {{option.value}}: {{option-tally optionVotes=option.votes pollVotes=model.pollVotes}}
     </li>
   {{/each}}
 </ul>
